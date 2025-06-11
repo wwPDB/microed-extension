@@ -1,14 +1,13 @@
-# MicroED update documentation
+# Electron Diffraction Dictionary Update Documentation
 
 ---
-Title: MicroED dictionary extension  
+Title: Electron Diffraction Dictionary Extension  
 Author: C. Shao, E. Peisach  
 Date: 11-Jun-2025  
 email: chenghua.shao@rcsb.org  
 ---
-# MicroED data model dictionary update
 
-This document provides an overview of extensions to support PDB MicroED data model. Listed below are dictionary content related to the update as new data categories.
+This document provides an overview of extensions to support metadata collection and annotation of PDB structures resolved by Electron Diffraction methods, especially the Microcrystal Electron Diffraction (MicroED) method. Listed below are dictionary content of the new data categories designed for Electron Diffraction methods.
 
 ## pdbx_exptl_subtype
 Data items in PDBX_EXPTL_SUBTYPE describes specific details about the experiments in the EXPTL category.
@@ -25,8 +24,8 @@ of the primary method recorded in the the _exptl.method item, with distinctive
 
     *Enumeration:*
 
-      * 2-Dimensional Electron Crystallography
       * Microcrystal Electron Diffraction
+      * 2-Dimensional Electron Crystallography
 
 
 * **_pdbx_exptl_subtype.details**
@@ -67,9 +66,9 @@ was performed on the sample
 
     *Enumeration:*
 
-      * discrete angles
-      * continuous rotation
       * none
+      * continuous rotation
+      * discrete angles
 
 
 * **_pdbx_electron_diffrn.collection_date**
@@ -109,12 +108,12 @@ Describes microcrystal preparation.
 
     *Enumeration:*
 
-      * CELLULOSE ACETATE PLUS CARBON
-      * FORMVAR PLUS CARBON
-      * PARLODION PLUS CARBON
       * SILICON DIOXIDEz
-      * CARBON
+      * CELLULOSE ACETATE PLUS CARBON
+      * PARLODION PLUS CARBON
       * HOLEY CARBON
+      * CARBON
+      * FORMVAR PLUS CARBON
 
 
 * **_pdbx_electron_diffrn_crystal_prep.vitrification_method**
@@ -127,8 +126,8 @@ Describes microcrystal preparation.
     *Enumeration:*
 
       * OTHER
-      * NITROGEN
       * ETHANE
+      * NITROGEN
 
 
 * **_pdbx_electron_diffrn_crystal_prep.microcrystal_method**
@@ -136,11 +135,11 @@ Describes microcrystal preparation.
 
     *Enumeration:*
 
+      * Other
+      * FIB milling
+      * Sonication
       * Vortexing
       * Naturally grown
-      * Sonication
-      * FIB milling
-      * Other
 
 
 * **_pdbx_electron_diffrn_crystal_prep.microcrystal_instrument**
@@ -186,36 +185,36 @@ e.g. the model of microscope
 
     *Enumeration:*
 
-      * FEI/PHILIPS CM300FEG/ST
-      * FEI/PHILIPS CM300FEG/T
-      * FEI TITAN
-      * TFS TALOS
-      * FEI TECNAI F20
-      * FEI/PHILIPS CM200FEG
-      * JEOL 100B
-      * SIEMENS SULEIKA
-      * JEOL 3000SFF
-      * JEOL KYOTO-3000SFF
-      * FEI TITAN KRIOS
-      * FEI TECNAI 12
-      * ZEISS LIBRA120PLUS
-      * HITACHI HF3000
-      * FEI TECNAI F30
-      * JEOL 2010F
-      * JEOL 2100F
-      * JEOL CRYO ARM 300
-      * TFS KRIOS
-      * FEI TECNAI 20
-      * FEI/PHILIPS EM420
       * FEI POLARA 300
-      * HITACHI EF3000
-      * JEOL 4000EX
-      * TFS TALOS F200C
-      * JEOL 2100
-      * JEOL 4000
-      * TFS GLACIOS
-      * FEI/PHILIPS CM12
+      * FEI TECNAI F30
       * FEI TALOS ARCTICA
+      * TFS KRIOS
+      * FEI/PHILIPS EM420
+      * JEOL CRYO ARM 300
+      * FEI TITAN
+      * JEOL 4000
+      * TFS TALOS F200C
+      * FEI TITAN KRIOS
+      * FEI TECNAI F20
+      * ZEISS LIBRA120PLUS
+      * JEOL 2100F
+      * TFS GLACIOS
+      * JEOL 2010F
+      * FEI/PHILIPS CM12
+      * HITACHI EF3000
+      * FEI TECNAI 12
+      * JEOL 4000EX
+      * FEI/PHILIPS CM300FEG/T
+      * JEOL 3000SFF
+      * JEOL 100B
+      * JEOL 2100
+      * FEI/PHILIPS CM300FEG/ST
+      * TFS TALOS
+      * JEOL KYOTO-3000SFF
+      * FEI/PHILIPS CM200FEG
+      * FEI TECNAI 20
+      * HITACHI HF3000
+      * SIEMENS SULEIKA
 
 
 * **_pdbx_electron_diffrn_source.dose_rate**
@@ -262,9 +261,9 @@ Describes the detector/camera
     *Enumeration:*
 
       * FILM
-      * CMOS
       * PIXEL
       * CCD
+      * CMOS
 
 
 * **_pdbx_electron_diffrn_detector.mode**
@@ -272,9 +271,9 @@ Describes the detector/camera
 
     *Enumeration:*
 
-      * Other
       * Counting
       * Integrating
+      * Other
 
 
 * **_pdbx_electron_diffrn_detector.details**
