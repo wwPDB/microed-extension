@@ -1,16 +1,14 @@
 # MicroED update documentation
 
 ---
-Title: Introduction to metallic ligand annotation dictionary extension  
-Author: A. Biester, E. Peisach  
-Date: 21-Apr-2025  
-email: ezra.peisach@rcsb.org  
+Title: MicroED dictionary extension  
+Author: C. Shao, E. Peisach  
+Date: 11-Jun-2025  
+email: chenghua.shao@rcsb.org  
 ---
-# Metallic ligand annotation update on Chemical Component Dictionary
+# MicroED data model dictionary update
 
-This document provides an overview of extensions to support metallic ligand data
-annotation and remediation. Listed below are dictionary content unique to metallic ligands,
-either as new or updated data items within the exsiting dictionaries, or as new categories.
+This document provides an overview of extensions to support PDB MicroED data model. Listed below are dictionary content related to the update as new data categories.
 
 ## pdbx_exptl_subtype
 Data items in PDBX_EXPTL_SUBTYPE describes specific details about the experiments in the EXPTL category.
@@ -27,8 +25,8 @@ of the primary method recorded in the the _exptl.method item, with distinctive
 
     *Enumeration:*
 
-      * Microcrystal Electron Diffraction
       * 2-Dimensional Electron Crystallography
+      * Microcrystal Electron Diffraction
 
 
 * **_pdbx_exptl_subtype.details**
@@ -111,12 +109,12 @@ Describes microcrystal preparation.
 
     *Enumeration:*
 
-      * PARLODION PLUS CARBON
-      * HOLEY CARBON
-      * SILICON DIOXIDEz
-      * FORMVAR PLUS CARBON
-      * CARBON
       * CELLULOSE ACETATE PLUS CARBON
+      * FORMVAR PLUS CARBON
+      * PARLODION PLUS CARBON
+      * SILICON DIOXIDEz
+      * CARBON
+      * HOLEY CARBON
 
 
 * **_pdbx_electron_diffrn_crystal_prep.vitrification_method**
@@ -128,8 +126,8 @@ Describes microcrystal preparation.
 
     *Enumeration:*
 
-      * NITROGEN
       * OTHER
+      * NITROGEN
       * ETHANE
 
 
@@ -138,8 +136,8 @@ Describes microcrystal preparation.
 
     *Enumeration:*
 
-      * Naturally grown
       * Vortexing
+      * Naturally grown
       * Sonication
       * FIB milling
       * Other
@@ -188,36 +186,36 @@ e.g. the model of microscope
 
     *Enumeration:*
 
-      * JEOL 4000EX
-      * JEOL 2010F
-      * FEI TITAN KRIOS
-      * HITACHI EF3000
-      * FEI POLARA 300
-      * TFS TALOS F200C
-      * FEI/PHILIPS CM12
-      * FEI TECNAI F30
+      * FEI/PHILIPS CM300FEG/ST
+      * FEI/PHILIPS CM300FEG/T
+      * FEI TITAN
       * TFS TALOS
       * FEI TECNAI F20
-      * FEI TECNAI 12
-      * FEI/PHILIPS CM300FEG/T
-      * JEOL 4000
       * FEI/PHILIPS CM200FEG
-      * JEOL 2100F
-      * FEI TALOS ARCTICA
-      * FEI TECNAI 20
-      * JEOL 3000SFF
-      * TFS GLACIOS
-      * FEI TITAN
-      * JEOL KYOTO-3000SFF
-      * JEOL CRYO ARM 300
-      * ZEISS LIBRA120PLUS
-      * SIEMENS SULEIKA
-      * FEI/PHILIPS CM300FEG/ST
-      * TFS KRIOS
-      * FEI/PHILIPS EM420
-      * HITACHI HF3000
-      * JEOL 2100
       * JEOL 100B
+      * SIEMENS SULEIKA
+      * JEOL 3000SFF
+      * JEOL KYOTO-3000SFF
+      * FEI TITAN KRIOS
+      * FEI TECNAI 12
+      * ZEISS LIBRA120PLUS
+      * HITACHI HF3000
+      * FEI TECNAI F30
+      * JEOL 2010F
+      * JEOL 2100F
+      * JEOL CRYO ARM 300
+      * TFS KRIOS
+      * FEI TECNAI 20
+      * FEI/PHILIPS EM420
+      * FEI POLARA 300
+      * HITACHI EF3000
+      * JEOL 4000EX
+      * TFS TALOS F200C
+      * JEOL 2100
+      * JEOL 4000
+      * TFS GLACIOS
+      * FEI/PHILIPS CM12
+      * FEI TALOS ARCTICA
 
 
 * **_pdbx_electron_diffrn_source.dose_rate**
@@ -263,10 +261,10 @@ Describes the detector/camera
 
     *Enumeration:*
 
-      * PIXEL
       * FILM
-      * CCD
       * CMOS
+      * PIXEL
+      * CCD
 
 
 * **_pdbx_electron_diffrn_detector.mode**
@@ -274,9 +272,9 @@ Describes the detector/camera
 
     *Enumeration:*
 
+      * Other
       * Counting
       * Integrating
-      * Other
 
 
 * **_pdbx_electron_diffrn_detector.details**
