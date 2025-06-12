@@ -63,6 +63,8 @@ This new group is used to capture the metadata for the unique features of the Mi
 - pdbx_electron_diffrn_detector: Describes the detector/camera
 - pdbx_electron_diffrn_continuous_rotation: Describes continuous rotation data collection
 - pdbx_electron_diffrn_discrete_angle: Describes data collection at still discrete angles
+<br>
+
 Details of each category can be found at [Dictionary](dict/electron_diffrn-extension.md)
 
 ### New pdbx_exptl_subtype to be used to diffrentiate between MicroED and 2DEC, and to record other subtypes of the primary methods.
@@ -75,15 +77,87 @@ pdbx_exptl_subtype describes specific details about the experiments in the EXPTL
 
 ## Example Data Categories
 
-### Example of method subtype
+### Example of pdbx_exptl_subtype
 ```
 #
 _pdbx_exptl_subtype.exptl_method   "ELECTRON CRYSTALLOGRAPHY"
 _pdbx_exptl_subtype.method_type    "Microcrystal Electron Eiffraction"
 #
 ```
+### Example of pdbx_electron_diffrn_crystal_prep
+```
+#
+_pdbx_electron_diffrn_crystal_prep.id					1
+_pdbx_electron_diffrn_crystal_prep.electron_diffrn_id			1  
+_pdbx_electron_diffrn_crystal_prep.crystal_id				1  
+_pdbx_electron_diffrn_crystal_prep.grid					"gold glider grid"   
+_pdbx_electron_diffrn_crystal_prep.grid_film				?
+_pdbx_electron_diffrn_crystal_prep.vitrification_method			"plunged into liquid ethane without blotting"
+_pdbx_electron_diffrn_crystal_prep.vitrification_cryogen		ETHANE
+_pdbx_electron_diffrn_crystal_prep.microcrystal_method			"FIB milling"
+_pdbx_electron_diffrn_crystal_prep.microcrystal_instrument    		"Thermo Fisher Helios Hydra dual-beam plasma beam FIB/SEM"
+_pdbx_electron_diffrn_crystal_prep.microcrystal_min_dim			0.3
+_pdbx_electron_diffrn_crystal_prep.microcrystal_max_dim			20
+_pdbx_electron_diffrn_crystal_prep.microcrystal_description		lamella
+_pdbx_electron_diffrn_crystal_prep.details				"crystal grew on the grid"
+#
+```
+### Example of pdbx_electron_diffrn
+```
+#
+_pdbx_electron_diffrn.entry_id				8SDK	
+_pdbx_electron_diffrn.id				1  
+_pdbx_electron_diffrn.crystal_id			1  
+_pdbx_electron_diffrn.detector_distance			1550 
+_pdbx_electron_diffrn.temperature			100
+_pdbx_electron_diffrn.tilt_method			"continuous rotation"
+_pdbx_electron_diffrn.collection_date			2023-01-01
+_pdbx_electron_diffrn.total_images			700
+_pdbx_electron_diffrn.details				?
+#
 
+```
+### Example of pdbx_electron_diffrn_source
+```
+#
+_pdbx_electron_diffrn_source.id				1
+_pdbx_electron_diffrn_source.electron_diffrn_id		1  
+_pdbx_electron_diffrn_source.instrument_model		"FEI TITAN KRIOS"
+_pdbx_electron_diffrn_source.dose_rate			?
+_pdbx_electron_diffrn_source.dose_accumulated		0.64
+_pdbx_electron_diffrn_source.accelerating_voltage 	300
+_pdbx_electron_diffrn_source.electron_source	 	"FIELD EMISSION GUN"
+_pdbx_electron_diffrn_source.details			?
+#
+```
+### Example of pdbx_electron_diffrn_detector
+```
+#
+_pdbx_electron_diffrn_detector.id			1
+_pdbx_electron_diffrn_detector.electron_diffrn_id	1  
+_pdbx_electron_diffrn_detector.detector_camera		"FEI FALCON IV (4k x 4k)"
+_pdbx_electron_diffrn_detector.detector_sensor		CMOS	
+_pdbx_electron_diffrn_detector.mode			Counting
+_pdbx_electron_diffrn_detector.details			?
+#
+```
+### Example of pdbx_electron_diffrn_continuous_rotation
+```
+#
+_pdbx_electron_diffrn_continuous_rotation.id				1
+_pdbx_electron_diffrn_continuous_rotation.electron_diffrn_id		1  
+_pdbx_electron_diffrn_continuous_rotation.angle_start			-30
+_pdbx_electron_diffrn_continuous_rotation.angle_end			30
+_pdbx_electron_diffrn_continuous_rotation.rotation_rate			0.2
+_pdbx_electron_diffrn_continuous_rotation.exposure_time_per_image 	?
+_pdbx_electron_diffrn_continuous_rotation.angle_per_image               ?
+_pdbx_electron_diffrn_continuous_rotation.details			?
+#
+```
+### Example of pdbx_electron_diffrn_discrete_angle
+```
 
+```
 ## References
 From electron crystallography of 2D crystals to MicroED of 3D crystals.
 Martynowycz MW, Gonen T.
