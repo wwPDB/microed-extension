@@ -19,6 +19,7 @@ Electron Diffraction on 2D crystals was first reported by Henderson in 1975. The
 Figure 1: Growth of PDB structures resolved by electron diffraction.
 <br>
 
+
 The current PDB data model to process electron diffraction structures needs to be updated to addess the uniqueness of MicroED structures and data process. In order to develop the proper model, we started to review the requirements for PDB to collect data and metadata on experimental process, diffraction data collection, diffraction data process, structural solution, and refinement of MicroED method, especially in comparison to 3DEM, X-ray, and 2DEC. Here, an improved PDB mmCIF data model for the electron diffraction method method is then proposed to fulfill the requirements, and aim to handle both MicroED and 2DEC structures, although in the following text MicroED data features are focused on for demonstration. 
 
 MicroED is a CryoEM method that was developed in 2013 using electron diffraction data on 3D microcrystals (Shi et al., 2013). The method was developed for structure determination of proteins from microcrystals (or nanocrystals)  that are usually in the size of sub-micron, with an ideal thickness of approximately 300-500 nm (Martynowycz et al., 2019) that are usually too thin for X-ray diffraction. Samples are usually prepared by depositing microcrystals in solution on a carbon-coated EM grid (Shi et al., 2016). Transmission electron microscope (TEM) is used in diffraction mode with an extremely low electron exposure (Shi et al., 2016). Although still diffraction images were collected at the discrete tilt angles during the early stage of the method development (Shi et al., 2013), for most of the current research the microcrystal is continuously rotated while diffraction is collected on a fast camera as a movie (Shi et al., 2016). “On an electron microscope crystal oscillation is complicated by difficulties in accurately positioning the stage, which is typically optimized to reduce vibrations during long exposures” (Hattne et al., 2015). MicroED diffraction data is then processed using traditional software for X-ray crystallography for structure analysis and refinement (Hattne et al., 2015). 
@@ -37,6 +38,7 @@ Figure 2 summarize the similarities and differences among MicroED, X-ray and 3DE
 
 <img src="imgs/model.png" alt="linked_mod" width="600px">
 Figure 2: comparison between MicroED, X-ray, and 3DEM data models.
+<br>
 <br>
 
 Each of the mmCIF data groups and categories have been reviewed to decide whether an existing data group/category can be re-used for MicroED structures, or a new group/category should be developed because of the uniqueness of the MicroED structures.
