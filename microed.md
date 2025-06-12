@@ -18,7 +18,7 @@ Electron Diffraction on 2D crystals was first reported by Henderson in 1975. The
 <img src="imgs/growth.png" alt="linked_mod" width="600px">
 Figure 1: Growth of PDB structures resolved by electron diffraction.
 <br>
-
+<br>
 
 The current PDB data model to process electron diffraction structures needs to be updated to addess the uniqueness of MicroED structures and data process. In order to develop the proper model, we started to review the requirements for PDB to collect data and metadata on experimental process, diffraction data collection, diffraction data process, structural solution, and refinement of MicroED method, especially in comparison to 3DEM, X-ray, and 2DEC. Here, an improved PDB mmCIF data model for the electron diffraction method method is then proposed to fulfill the requirements, and aim to handle both MicroED and 2DEC structures, although in the following text MicroED data features are focused on for demonstration. 
 
