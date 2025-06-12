@@ -15,8 +15,9 @@
 
 Electron Diffraction on 2D crystals was first reported by Henderson in 1975. The first PDB structure (PDB ID 1BRD) of bacteriorhodopsin resolved by 2D Electron Crystallography (2DEC) was deposited in 1990. In the 22 years from 1990 to 2012, there were only 36 2DEC structures deposited into PDB, with 0-5 for each year. However, the situation changed when Microcrystal Electron Diffraction (MicroED) method was developed to apply electron diffraction on small 3D crystals, with the growth demonstrated in the following figure. 40+ MicroED structures were deposited into the PDB in 2021 alone.
 
-<img src="imgs/model.png" alt="linked_mod" width="600px">
+<img src="imgs/growth.png" alt="linked_mod" width="600px">
 Figure 1: Growth of PDB structures resolved by electron diffraction.
+
 
 The current PDB data model to process electron diffraction structures needs to be updated to addess the uniqueness of MicroED structures and data process. In order to develop the proper model, we started to review the requirements for PDB to collect data and metadata on experimental process, diffraction data collection, diffraction data process, structural solution, and refinement of MicroED method, especially in comparison to 3DEM, X-ray, and 2DEC. Here, an improved PDB mmCIF data model for the electron diffraction method method is then proposed to fulfill the requirements, and aim to handle both MicroED and 2DEC structures, although in the following text MicroED data features are focused on for demonstration. 
 
@@ -36,6 +37,7 @@ Figure 2 summarize the similarities and differences among MicroED, X-ray and 3DE
 
 <img src="imgs/model.png" alt="linked_mod" width="600px">
 Figure 2: comparison between MicroED, X-ray, and 3DEM data models.
+
 
 Each of the mmCIF data groups and categories have been reviewed to decide whether an existing data group/category can be re-used for MicroED structures, or a new group/category should be developed because of the uniqueness of the MicroED structures.
 
@@ -64,8 +66,8 @@ Details of each category can be found at [Dictionary](dict/electron_diffrn-exten
 pdbx_exptl_subtype describes specific details about the experiments in the EXPTL category.
 - _pdbx_exptl_subtype.exptl_method : This data item is a pointer to _exptl.method in the EXPTL category.
 - _pdbx_exptl_subtype.method_type : The subtype of the method used in the experiment. The subtype should be a variance of the primary method recorded in the the _exptl.method item, with distinctive technical applications and significant scientific impacts, e.g.
-* Microcrystal Electron Diffraction
-* 2-Dimensional Electron Crystallography
+  - Microcrystal Electron Diffraction
+  - 2-Dimensional Electron Crystallography
 
 
 ## Example Data Categories
