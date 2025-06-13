@@ -537,7 +537,7 @@ _exptl.crystals_number            1
 _exptl.method                     'ELECTRON CRYSTALLOGRAPHY'
 #
 _pdbx_exptl_subtype.exptl_method   "ELECTRON CRYSTALLOGRAPHY"
-_pdbx_exptl_subtype.method_type    "Microcrystal Electron Eiffraction"
+_pdbx_exptl_subtype.method_type    "Microcrystal Electron Diffraction"
 _pdbx_exptl_subtype.details 	   "Grow crystal directly on electron microscopy grid"
 #
 _exptl_crystal.id                           1 

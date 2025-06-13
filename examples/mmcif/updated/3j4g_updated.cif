@@ -3007,7 +3007,7 @@ HETATM 1035 O O   . HOH B 2 .   ? -28.436 -9.585  4.802   1.00 13.31 ? 234 HOH A
 # 
 #
 _pdbx_exptl_subtype.exptl_method   "ELECTRON CRYSTALLOGRAPHY"
-_pdbx_exptl_subtype.method_type    "Microcrystal Electron Eiffraction"
+_pdbx_exptl_subtype.method_type    "Microcrystal Electron Diffraction"
 _pdbx_exptl_subtype.details 	   ?
 # 
 _pdbx_electron_diffrn.entry_id				3J4G	
