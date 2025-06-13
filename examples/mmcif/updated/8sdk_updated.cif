@@ -536,10 +536,6 @@ _exptl.entry_id                   8SDK
 _exptl.crystals_number            1 
 _exptl.method                     'ELECTRON CRYSTALLOGRAPHY'
 #
-_pdbx_exptl_subtype.exptl_method   "ELECTRON CRYSTALLOGRAPHY"
-_pdbx_exptl_subtype.method_type    "Microcrystal Electron Diffraction"
-_pdbx_exptl_subtype.details 	   "Grow crystal directly on electron microscopy grid"
-#
 _exptl_crystal.id                           1 
 _exptl_crystal.density_Matthews             2.05
 _exptl_crystal.density_percent_sol          40
@@ -3860,6 +3856,50 @@ _space_group.IT_number        96
 _space_group.crystal_system   tetragonal 
 _space_group.id               1 
 #
+_reflns.pdbx_ordinal                     1 
+_reflns.entry_id                         8SDK
+_reflns.percent_possible_obs 		 87 
+_reflns.d_resolution_high                2.10 
+_reflns.d_resolution_low                 30.42
+_reflns.pdbx_diffrn_id			 1 
+_reflns.number_all         		 56301 
+_reflns.number_obs			 12774
+_reflns.pdbx_redundancy			 4.41
+_reflns.pdbx_netI_over_sigmaI		 2.82
+_reflns.pdbx_CC_half			 0.925
+_reflns.Rmerge_F_obs 			 44.5
+_reflns.B_iso_Wilson_estimate            16.75 
+_reflns.details                          ? 
+#
+loop_
+_software.citation_id 
+_software.classification 
+_software.compiler_name 
+_software.compiler_version 
+_software.contact_author 
+_software.contact_author_email 
+_software.date 
+_software.description 
+_software.dependencies 
+_software.hardware 
+_software.language 
+_software.location 
+_software.mods 
+_software.name 
+_software.os 
+_software.os_version 
+_software.type 
+_software.version 
+_software.pdbx_ordinal 
+? refinement       ? ? ? ? ? ? ? ? ? ? ? PHENIX  ? ? ? 1.20.1_4487 1 
+? 'data reduction' ? ? ? ? ? ? ? ? ? ? ? XDS     ? ? ? .           2 
+? 'data scaling'   ? ? ? ? ? ? ? ? ? ? ? XSCALE  ? ? ? .           3 
+? phasing          ? ? ? ? ? ? ? ? ? ? ? PHASER  ? ? ? .           4 
+#
+_pdbx_exptl_subtype.exptl_method   "ELECTRON CRYSTALLOGRAPHY"
+_pdbx_exptl_subtype.method_type    "Microcrystal Electron Diffraction"
+_pdbx_exptl_subtype.details 	   "Grow crystal directly on electron microscopy grid"
+#
 _pdbx_electron_diffrn.entry_id				8SDK	
 _pdbx_electron_diffrn.id				1  
 _pdbx_electron_diffrn.crystal_id			1  
@@ -3908,44 +3948,4 @@ _pdbx_electron_diffrn_crystal_prep.microcrystal_min_dim			0.3
 _pdbx_electron_diffrn_crystal_prep.microcrystal_max_dim			20
 _pdbx_electron_diffrn_crystal_prep.microcrystal_description		lamella
 _pdbx_electron_diffrn_crystal_prep.details				"crystal grew on the grid"
-#
-_reflns.pdbx_ordinal                     1 
-_reflns.entry_id                         8SDK
-_reflns.percent_possible_obs 		 87 
-_reflns.d_resolution_high                2.10 
-_reflns.d_resolution_low                 30.42
-_reflns.pdbx_diffrn_id			 1 
-_reflns.number_all         		 56301 
-_reflns.number_obs			 12774
-_reflns.pdbx_redundancy			 4.41
-_reflns.pdbx_netI_over_sigmaI		 2.82
-_reflns.pdbx_CC_half			 0.925
-_reflns.Rmerge_F_obs 			 44.5
-_reflns.B_iso_Wilson_estimate            16.75 
-_reflns.details                          ? 
-#
-loop_
-_software.citation_id 
-_software.classification 
-_software.compiler_name 
-_software.compiler_version 
-_software.contact_author 
-_software.contact_author_email 
-_software.date 
-_software.description 
-_software.dependencies 
-_software.hardware 
-_software.language 
-_software.location 
-_software.mods 
-_software.name 
-_software.os 
-_software.os_version 
-_software.type 
-_software.version 
-_software.pdbx_ordinal 
-? refinement       ? ? ? ? ? ? ? ? ? ? ? PHENIX  ? ? ? 1.20.1_4487 1 
-? 'data reduction' ? ? ? ? ? ? ? ? ? ? ? XDS     ? ? ? .           2 
-? 'data scaling'   ? ? ? ? ? ? ? ? ? ? ? XSCALE  ? ? ? .           3 
-? phasing          ? ? ? ? ? ? ? ? ? ? ? PHASER  ? ? ? .           4 
 #
