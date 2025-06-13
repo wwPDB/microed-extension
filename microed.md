@@ -63,12 +63,11 @@ This new group is used to capture the metadata for the unique features of the Mi
 - pdbx_electron_diffrn_detector: Describes the detector/camera
 - pdbx_electron_diffrn_continuous_rotation: Describes continuous rotation data collection
 - pdbx_electron_diffrn_discrete_angle: Describes data collection at still discrete angles
-<br>
 
 Details of each category can be found at [Dictionary](dict/electron_diffrn-extension.md)
 
-### New pdbx_exptl_subtype to be used to diffrentiate between MicroED and 2DEC, and to record other subtypes of the primary methods.
-pdbx_exptl_subtype describes specific details about the experiments in the EXPTL category.
+### New pdbx_exptl_subtype category to be used to diffrentiate between MicroED and 2DEC, and to record other subtypes of the primary methods.
+pdbx_exptl_subtype is added to exptl_group to describes specific details about the experiments.
 - _pdbx_exptl_subtype.exptl_method : This data item is a pointer to _exptl.method in the EXPTL category.
 - _pdbx_exptl_subtype.method_type : The subtype of the method used in the experiment. The subtype should be a variance of the primary method recorded in the the _exptl.method item, with distinctive technical applications and significant scientific impacts, e.g.
   - Microcrystal Electron Diffraction
@@ -156,7 +155,16 @@ _pdbx_electron_diffrn_continuous_rotation.details			?
 ```
 ### Example of pdbx_electron_diffrn_discrete_angle
 ```
-
+#
+_pdbx_electron_diffrn_discrete_angle.id				1
+_pdbx_electron_diffrn_discrete_angle.electron_diffrn_id		1  
+_pdbx_electron_diffrn_discrete_angle.angle_start		-45
+_pdbx_electron_diffrn_discrete_angle.angle_end			45
+_pdbx_electron_diffrn_discrete_angle.angle_increment		0.1-1
+_pdbx_electron_diffrn_discrete_angle.tilt_angle_lists		?
+_pdbx_electron_diffrn_discrete_angle.exposure_time_per_frame 	10
+_pdbx_electron_diffrn_discrete_angle.details			?
+#
 ```
 ## References
 From electron crystallography of 2D crystals to MicroED of 3D crystals.
