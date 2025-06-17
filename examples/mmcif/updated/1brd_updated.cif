@@ -3816,6 +3816,6 @@ _pdbx_electron_diffrn_discrete_angle.angle_start		?
 _pdbx_electron_diffrn_discrete_angle.angle_end			?
 _pdbx_electron_diffrn_discrete_angle.angle_increment		?
 _pdbx_electron_diffrn_discrete_angle.tilt_angle_lists		60
-_pdbx_electron_diffrn_discrete_angle.exposure_time_per_frame 	?
+_pdbx_electron_diffrn_discrete_angle.exposure_time_per_image 	?
 _pdbx_electron_diffrn_discrete_angle.details			?
 #

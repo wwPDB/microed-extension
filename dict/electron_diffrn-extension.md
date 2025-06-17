@@ -66,9 +66,9 @@ was performed on the sample
 
     *Enumeration:*
 
-      * none
       * continuous rotation
       * discrete angles
+      * none
 
 
 * **_pdbx_electron_diffrn.collection_date**
@@ -108,12 +108,12 @@ Describes microcrystal preparation.
 
     *Enumeration:*
 
+      * FORMVAR PLUS CARBON
+      * CARBON
       * SILICON DIOXIDEz
       * CELLULOSE ACETATE PLUS CARBON
-      * PARLODION PLUS CARBON
       * HOLEY CARBON
-      * CARBON
-      * FORMVAR PLUS CARBON
+      * PARLODION PLUS CARBON
 
 
 * **_pdbx_electron_diffrn_crystal_prep.vitrification_method**
@@ -126,8 +126,8 @@ Describes microcrystal preparation.
     *Enumeration:*
 
       * OTHER
-      * ETHANE
       * NITROGEN
+      * ETHANE
 
 
 * **_pdbx_electron_diffrn_crystal_prep.microcrystal_method**
@@ -135,9 +135,9 @@ Describes microcrystal preparation.
 
     *Enumeration:*
 
-      * Other
-      * FIB milling
       * Sonication
+      * FIB milling
+      * Other
       * Vortexing
       * Naturally grown
 
@@ -185,36 +185,36 @@ e.g. the model of microscope
 
     *Enumeration:*
 
-      * FEI POLARA 300
+      * FEI/PHILIPS CM300FEG/ST
+      * JEOL KYOTO-3000SFF
+      * FEI/PHILIPS CM300FEG/T
+      * JEOL 100B
+      * FEI/PHILIPS CM12
+      * JEOL 2100
+      * TFS TALOS
+      * FEI TECNAI 20
+      * TFS TALOS F200C
+      * HITACHI HF3000
+      * FEI TECNAI F20
+      * JEOL 2100F
+      * FEI TECNAI 12
+      * FEI TITAN
       * FEI TECNAI F30
+      * SIEMENS SULEIKA
+      * ZEISS LIBRA120PLUS
+      * TFS GLACIOS
       * FEI TALOS ARCTICA
       * TFS KRIOS
-      * FEI/PHILIPS EM420
-      * JEOL CRYO ARM 300
-      * FEI TITAN
-      * JEOL 4000
-      * TFS TALOS F200C
-      * FEI TITAN KRIOS
-      * FEI TECNAI F20
-      * ZEISS LIBRA120PLUS
-      * JEOL 2100F
-      * TFS GLACIOS
-      * JEOL 2010F
-      * FEI/PHILIPS CM12
       * HITACHI EF3000
-      * FEI TECNAI 12
-      * JEOL 4000EX
-      * FEI/PHILIPS CM300FEG/T
-      * JEOL 3000SFF
-      * JEOL 100B
-      * JEOL 2100
-      * FEI/PHILIPS CM300FEG/ST
-      * TFS TALOS
-      * JEOL KYOTO-3000SFF
+      * JEOL CRYO ARM 300
+      * JEOL 4000
       * FEI/PHILIPS CM200FEG
-      * FEI TECNAI 20
-      * HITACHI HF3000
-      * SIEMENS SULEIKA
+      * JEOL 2010F
+      * FEI POLARA 300
+      * FEI/PHILIPS EM420
+      * FEI TITAN KRIOS
+      * JEOL 3000SFF
+      * JEOL 4000EX
 
 
 * **_pdbx_electron_diffrn_source.dose_rate**
@@ -260,10 +260,10 @@ Describes the detector/camera
 
     *Enumeration:*
 
-      * FILM
       * PIXEL
       * CCD
       * CMOS
+      * FILM
 
 
 * **_pdbx_electron_diffrn_detector.mode**
@@ -271,9 +271,9 @@ Describes the detector/camera
 
     *Enumeration:*
 
-      * Counting
-      * Integrating
       * Other
+      * Integrating
+      * Counting
 
 
 * **_pdbx_electron_diffrn_detector.details**
@@ -304,7 +304,7 @@ Describes continuous rotation data collection
 : The speed of continuous rotation measured in degrees/second
 
 
-* **_pdbx_electron_diffrn_continuous_rotation.exposure_time_per_frame**
+* **_pdbx_electron_diffrn_continuous_rotation.exposure_time_per_image**
 : The exposure time of the rolling shutter model of the detector/camera
 measured in seconds.
 
@@ -352,7 +352,7 @@ relative angles.
 If both crystal and beam are tilted, record the combination results of relative angles.
 
 
-* **_pdbx_electron_diffrn_discrete_angle.exposure_time_per_frame**
+* **_pdbx_electron_diffrn_discrete_angle.exposure_time_per_image**
 : The exposure time of the rolling shutter model of the detector/camera
 measured in seconds.
 
