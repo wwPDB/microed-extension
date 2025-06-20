@@ -31,11 +31,11 @@ In summary, MicroED enables high-resolution structure determination from sub-mic
 
 
 ## Scope
-As of June 18, 2025, there are 267 publicly released PDB structures resolved by electron diffraction method. Among them ~20% were resolved by 2DEC, and ~80% by MicroED. There are also 30+ structures that have been deposited but not released yet, raising the total to ~300. The improved electron diffraction proposed here will update all of these strutures.
+As of June 18, 2025, there are 267 publicly released PDB structures resolved by electron diffraction method. Among them ~20% were resolved by 2DEC, and ~80% by MicroED. There are also 30+ structures that have been deposited but not released yet, raising the total to ~300. The improved electron diffraction proposed here will update all of these structures.
 
 
 ## Corrections
-Figure 2 summarize the similarities and differences among MicroED, X-ray and 3DEM methods. It also lists the mmCIF data group involved for each stage of the data process and structure solution. 
+Figure 2 summarizes the similarities and differences among MicroED, X-ray and 3DEM methods. It also lists the mmCIF data group involved for each stage of the data process and structure solution. 
 
 <img src="imgs/model.png" alt="linked_mod" width="600px">
 Figure 2: comparison between MicroED, X-ray, and 3DEM data models.
@@ -56,7 +56,7 @@ The following data categories have been used for MicroED structures and will be 
 - em_group: Attempt was made to establish an alternate MicroED data model re-using the em_group. The alternate data model has been shared, reviewed, and discussed among wwPDB partners and deemed inappropriate because it requires significant changes to the current em_group in order to adapt to the MicroED method.
 
 ### New electron_diffn_group to be used for MicroED
-This new group is used to capture the metadata for the unique features of the MicroED method, i.e. the crytal sample preparation and electron diffraction data collection process highlighted in Figure 2, with 6 new catetories introduced.
+This new group is used to capture the metadata for the unique features of the MicroED method, i.e. the crystal sample preparation and electron diffraction data collection process highlighted in Figure 2, with 6 new categories introduced.
 - pdbx_electron_diffrn: Describes individual diffraction processes
 - pdbx_electron_diffrn_crystal_prep: Describes microcrystal preparation
 - pdbx_electron_diffrn_source: Describe the electron source
@@ -66,8 +66,8 @@ This new group is used to capture the metadata for the unique features of the Mi
 
 Details of each category can be found at [Dictionary](dict/electron_diffrn-extension.md)
 
-### New pdbx_exptl_subtype category to be used to diffrentiate between MicroED and 2DEC, and to record other subtypes of the primary methods.
-pdbx_exptl_subtype is added to exptl_group to describes specific details about the experiments.
+### New pdbx_exptl_subtype category to be used to differentiate between MicroED and 2DEC, and to record other subtypes of the primary methods.
+pdbx_exptl_subtype is added to exptl_group to describe specific details about the experiments.
 - _pdbx_exptl_subtype.exptl_method : This data item is a pointer to _exptl.method in the EXPTL category.
 - _pdbx_exptl_subtype.method_type : The subtype of the method used in the experiment. The subtype should be a variance of the primary method recorded in the the _exptl.method item, with distinctive technical applications and significant scientific impacts, e.g.
   - Microcrystal Electron Diffraction
@@ -80,7 +80,7 @@ pdbx_exptl_subtype is added to exptl_group to describes specific details about t
 ```
 #
 _pdbx_exptl_subtype.exptl_method   "ELECTRON CRYSTALLOGRAPHY"
-_pdbx_exptl_subtype.method_type    "Microcrystal Electron Eiffraction"
+_pdbx_exptl_subtype.method_type    "Microcrystal Electron Diffraction"
 #
 ```
 ### Example of pdbx_electron_diffrn_crystal_prep
