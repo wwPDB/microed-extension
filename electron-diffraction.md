@@ -19,7 +19,7 @@ Figure 1: Growth of PDB structures resolved by electron diffraction.
 <br>
 <br>
 
-The current PDB data model for electron diffraction structures requires updates to address the specific characteristics of 3D ED/MicroED, including its unique data acquisition and processing protocols. To support the development of an improved data model, we conducted a thorough review of the requirements for data and metadata collection by the PDB. This review covered key areas such as experimental protocols, diffraction data collection and processing, structure solution, and refinement—especially in comparison to 3DEM, X-ray crystallography, and 2DEC methods. Based on this analysis, we propose an enhanced PDB mmCIF data model tailored for electron diffraction techniques, with a focus on supporting both 3D ED/MicroED and 2DEC structures. For illustration, this paper emphasizes 3D ED/MicroED-specific data features.
+The current PDB data model for electron diffraction structures requires updates to address the specific characteristics of 3D ED/MicroED, including its unique data acquisition and processing protocols. To support the development of an improved data model, we conducted a thorough review of the requirements for data and metadata collection by the PDB. This review covered key areas such as experimental protocols, diffraction data collection and processing, structure solution, and refinement—especially in comparison to 3DEM, X-ray crystallography, and 2DEC methods. Based on this analysis, we propose an enhanced PDB mmCIF data model tailored for electron diffraction techniques, with a focus on supporting both 3D ED/MicroED and 2DEC structures. For illustration, this document emphasizes 3D ED/MicroED-specific data features.
 
 3D ED/MicroED is a cryo-electron microscopy (CryoEM) technique introduced in 2013 (Shi et al., 2013), designed for the structure determination of proteins from micro- or nanocrystals typically smaller than one micron. The ideal crystal thickness ranges from approximately 300 to 500 nm (Martynowycz et al., 2019), dimensions generally unsuitable for X-ray diffraction. Samples are prepared by depositing microcrystals in solution onto a carbon-coated EM grid (Shi et al., 2016). Data are collected in diffraction mode on a transmission electron microscope (TEM) using extremely low electron exposure. While early implementations involved collecting still diffraction images at discrete tilt angles (Shi et al., 2013), current protocols predominantly use continuous rotation of the crystal while recording diffraction movies on fast detectors (Shi et al., 2016). Crystal oscillation in TEM presents unique challenges, such as the difficulty in precisely controlling stage movements due to vibration constraints (Hattne et al., 2015). The resulting diffraction data can be processed with conventional X-ray crystallography software for structure solution and refinement (Hattne et al., 2015).
 
@@ -34,45 +34,33 @@ In summary, 3D ED/MicroED enables high-resolution structure determination from s
 As of June 18, 2025, there are 267 publicly released PDB structures resolved by electron diffraction method. Among them ~20% were resolved by 2DEC, and ~80% by 3D ED/MicroED. There are also 30+ structures that have been deposited but not released yet, raising the total to ~300. The improved electron diffraction proposed here will update all of these structures.
 
 
-## Corrections
+## Updates
 Figure 2 summarizes the similarities and differences among 3D ED/MicroED, X-ray and 3DEM methods. It also lists the mmCIF data group involved for each stage of the data process and structure solution. 
 
-<img src="imgs/model.png" alt="linked_mod" width="600px">
+<img src="imgs/model.png" alt="linked_mod" width="900px">
 Figure 2: comparison between 3D ED/MicroED, X-ray, and 3DEM data models.
 <br>
 <br>
 
-Each of the mmCIF data groups and categories have been reviewed to decide whether an existing data group/category can be re-used for 3D ED/MicroED structures, or a new group/category should be developed because of the uniqueness of the 3D ED/MicroED structures.
+All mmCIF data groups and categories have been reviewed to decide whether existing data groups/categories can be re-used for 3D ED/MicroED structures, and whether new data categories and items should be developed to record 3D ED/MicroED-specific data.
 
-### Existing mmCIF data groups to be reused for 3D ED/MicroED
-The following data categories have been used for 3D ED/MicroED structures and will be used continuously. 
-- exptl_group 
-- refln_group 
-- refine_group 
-- computing_group (software category only)
+### Updates to exptl_group
+Current exptl_group (https://mmcif.wwpdb.org/dictionaries/mmcif_pdbx_v50.dic/Groups/exptl_group.html) records the general crystallization process in the conventional exptl_crystal and exptl_crystal_grow categories applicable to both X-ray and Electron diffraction. With the updates, the microcrystal production is recorded in a new category of pdbx_exptl_crystal_process within the exptl_group, which can be used for both 3D ED/MicroED and BioXFEL.
 
-### Existing mmCIF data groups NOT to be used for 3D ED/MicroED
-- diffrn_group: This X-ray specific diffraction data collection group do not have significant  insufficient data items to cover 3D ED/MicroED data collection process 
-- em_group: Attempt was made to establish an alternate 3D ED/MicroED data model re-using the em_group. The alternate data model has been shared, reviewed, and discussed among wwPDB partners and deemed inappropriate because it requires significant changes to the current em_group in order to adapt to the 3D ED/MicroED method.
-
-### New electron_diffn_group to be used for 3D ED/MicroED
-This new group is used to capture the metadata for the unique features of the 3D ED/MicroED method, i.e. the crystal sample preparation and electron diffraction data collection process highlighted in Figure 2, with 6 new categories introduced.
-- pdbx_electron_diffrn: Describes individual diffraction processes
-- pdbx_electron_diffrn_crystal_prep: Describes microcrystal preparation
-- pdbx_electron_diffrn_source: Describe the electron source
-- pdbx_electron_diffrn_detector: Describes the detector/camera
-- pdbx_electron_diffrn_continuous_rotation: Describes continuous rotation data collection
-- pdbx_electron_diffrn_discrete_angle: Describes data collection at still discrete angles
-
-Details of each category can be found at [Dictionary](dict/electron_diffrn-extension.md)
-
-### New pdbx_exptl_subtype category to be used to differentiate between 3D ED/MicroED and 2DEC, and to record other subtypes of the primary methods.
+#### New pdbx_exptl_subtype category to be used to differentiate between 3D ED/MicroED and 2DEC, and to record other subtypes of the primary methods.
 pdbx_exptl_subtype is added to exptl_group to describe specific details about the experiments.
 - _pdbx_exptl_subtype.exptl_method : This data item is a pointer to _exptl.method in the EXPTL category.
 - _pdbx_exptl_subtype.method_type : The subtype of the method used in the experiment. The subtype should be a variance of the primary method recorded in the the _exptl.method item, with distinctive technical applications and significant scientific impacts, e.g.
   - Microcrystal Electron Diffraction
   - 2-Dimensional Electron Crystallography
 
+### Updates to diffrn_group
+Current diffrn_group (https://mmcif.wwpdb.org/dictionaries/mmcif_pdbx_v50.dic/Groups/diffrn_group.html) records the general diffraction data that can be re-used for 3D ED/MicroED. The updated data model enhances the diffrn_measurement category with IUCr-approved Core cif ED extension, and adds other MicroED/3DED-specific data in the new pdbx_diffrn_ed category.
+
+### serial ED data
+serial ED experiments will be recorded in the existing xfel group (https://mmcif.wwpdb.org/dictionaries/mmcif_pdbx_v50.dic/Groups/xfel_group.html) that is connected to diffrn_group by the _diffrn.pdbx_serial_crystal_experiment marker. Despite the name, the xfel group was designed to handle serial crystallography applicable to both X-ray and 3D ED/MicroED.
+
+Details of each category can be found at [Dictionary](dict/electron_diffrn-extension.md)
 
 ## Example Data Categories
 
