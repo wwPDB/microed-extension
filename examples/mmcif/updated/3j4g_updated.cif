@@ -577,21 +577,6 @@ _exptl_crystal.description           ?
 _exptl_crystal.F_000                 ? 
 _exptl_crystal.preparation           ? 
 # 
-_diffrn.id                     1 
-_diffrn.ambient_temp           ? 
-_diffrn.ambient_temp_details   ? 
-_diffrn.crystal_id             1 
-# 
-_diffrn_radiation.diffrn_id                        1 
-_diffrn_radiation.wavelength_id                    1 
-_diffrn_radiation.pdbx_monochromatic_or_laue_m_l   M 
-_diffrn_radiation.monochromator                    ? 
-_diffrn_radiation.pdbx_diffrn_protocol             'SINGLE WAVELENGTH' 
-_diffrn_radiation.pdbx_scattering_type             electron 
-# 
-_diffrn_radiation_wavelength.id           1 
-_diffrn_radiation_wavelength.wavelength   . 
-_diffrn_radiation_wavelength.wt           1.0 
 # 
 _reflns.entry_id                     3J4G 
 _reflns.number_all                   2717 
@@ -3009,53 +2994,84 @@ HETATM 1035 O O   . HOH B 2 .   ? -28.436 -9.585  4.802   1.00 13.31 ? 234 HOH A
 _pdbx_exptl_subtype.exptl_method   "ELECTRON CRYSTALLOGRAPHY"
 _pdbx_exptl_subtype.method_type    "Microcrystal Electron Diffraction"
 _pdbx_exptl_subtype.details 	   ?
+#
+_pdbx_exptl_crystal_process.id				1
+_pdbx_exptl_crystal_process.crystal_id			1
+_pdbx_exptl_crystal_process.microcrystal_method 	"Naturally grown"
+_pdbx_exptl_crystal_process.microcrystal_instrument 	?
+_pdbx_exptl_crystal_process.microcrystal_min_dim 	0.5
+_pdbx_exptl_crystal_process.microcrystal_max_dim 	6
+_pdbx_exptl_crystal_process.microcrystal_description 	"rectangular or triangular forms with very sharp edges"
+_pdbx_exptl_crystal_process.details 			"microcrystals of sub micron size co-exist with large crystal in the crystallization drop"
+#
+_pdbx_exptl_crystal_cryo_treatment.crystal_id			1
+_pdbx_exptl_crystal_cryo_treatment.cooling_details		"plunged into liquid ethane"
+_pdbx_exptl_crystal_cryo_treatment.final_solution_details	?
+_pdbx_exptl_crystal_cryo_treatment.soaking_details		?
+_pdbx_exptl_crystal_cryo_treatment.cryogen			ETHANE
+#
+# The following categories belong to the diffrn_group of the PDB Electron Diffraction data model
+#
+_diffrn.id				1
+_diffrn.ambient_temp			?
+_diffrn.crystal_id			1
+_diffrn.crystal_support			"Quantifoil copper EM grid"
+_diffrn.crystal_treatment		?
+_diffrn.details				?
+_diffrn.pdbx_serial_crystal_experiment	N
 # 
-_pdbx_electron_diffrn.entry_id				3J4G	
-_pdbx_electron_diffrn.id				1  
-_pdbx_electron_diffrn.crystal_id			1  
-_pdbx_electron_diffrn.detector_distance			?
-_pdbx_electron_diffrn.temperature			100
-_pdbx_electron_diffrn.tilt_method			"discrete angles"
-_pdbx_electron_diffrn.collection_date			2013-07-01
-_pdbx_electron_diffrn.total_images			90
-_pdbx_electron_diffrn.details				?
+_diffrn_detector.id				1
+_diffrn_detector.diffrn_id			1
+_diffrn_detector.details			?	
+_diffrn_detector.detector 			CMOS
+_diffrn_detector.pdbx_collection_date		?
+_diffrn_detector.pdbx_collection_time_total	?
+_diffrn_detector.pdbx_frames_total		?
+_diffrn_detector.pdbx_frequency			?
+_diffrn_detector.type 				'TVIPS TEMCAM-F416 (4k x 4k)'
 #
-_pdbx_electron_diffrn_source.id				1
-_pdbx_electron_diffrn_source.electron_diffrn_id		1  
-_pdbx_electron_diffrn_source.instrument_model		'FEI TECNAI F20' 
-_pdbx_electron_diffrn_source.dose_rate			0.01
-_pdbx_electron_diffrn_source.dose_accumulated		9
-_pdbx_electron_diffrn_source.accelerating_voltage 	200
-_pdbx_electron_diffrn_source.electron_source	 	"FIELD EMISSION GUN"
-_pdbx_electron_diffrn_source.details			?
+_diffrn_source.diffrn_id			1
+_diffrn_source.details				?
+_diffrn_source.pdbx_wavelength_list		0.0197
+_diffrn_source.source 				"ELECTRON MICROSCOPE"
+_diffrn_source.type 				'FEI TECNAI F20'
+_diffrn_source.voltage				200
 #
-_pdbx_electron_diffrn_detector.id			1
-_pdbx_electron_diffrn_detector.electron_diffrn_id	1  
-_pdbx_electron_diffrn_detector.detector_camera		'TVIPS TEMCAM-F416 (4k x 4k)'
-_pdbx_electron_diffrn_detector.detector_sensor		CMOS	
-_pdbx_electron_diffrn_detector.mode			?
-_pdbx_electron_diffrn_detector.details			?
+_diffrn_radiation.diffrn_id				1
+_diffrn_radiation.collimation				?
+_diffrn_radiation.pdbx_diffrn_protocol			"SINGLE WAVELENGTH"
+_diffrn_radiation.pdbx_monochromatic_or_laue_m_l	M
+_diffrn_radiation.pdbx_scattering_type			electron
+_diffrn_radiation.wavelength_id				1
 #
-_pdbx_electron_diffrn_discrete_angle.id				1
-_pdbx_electron_diffrn_discrete_angle.electron_diffrn_id		1  
-_pdbx_electron_diffrn_discrete_angle.angle_start		-45
-_pdbx_electron_diffrn_discrete_angle.angle_end			45
-_pdbx_electron_diffrn_discrete_angle.angle_increment		0.1-1
-_pdbx_electron_diffrn_discrete_angle.tilt_angle_lists		?
-_pdbx_electron_diffrn_discrete_angle.exposure_time_per_image 	10
-_pdbx_electron_diffrn_discrete_angle.details			?
+_diffrn_radiation_wavelength.id           1 
+_diffrn_radiation_wavelength.wavelength   0.0197
+_diffrn_radiation_wavelength.wt           1.0 
 #
-_pdbx_electron_diffrn_crystal_prep.id					1
-_pdbx_electron_diffrn_crystal_prep.electron_diffrn_id			1  
-_pdbx_electron_diffrn_crystal_prep.crystal_id				1  
-_pdbx_electron_diffrn_crystal_prep.grid					"Quantifoil copper EM grid"
-_pdbx_electron_diffrn_crystal_prep.grid_film				"HOLEY CARBON"
-_pdbx_electron_diffrn_crystal_prep.vitrification_method			"plunged into liquid ethane"
-_pdbx_electron_diffrn_crystal_prep.vitrification_cryogen		ETHANE
-_pdbx_electron_diffrn_crystal_prep.microcrystal_method			"Naturally grown"
-_pdbx_electron_diffrn_crystal_prep.microcrystal_instrument    		?
-_pdbx_electron_diffrn_crystal_prep.microcrystal_min_dim			0.5
-_pdbx_electron_diffrn_crystal_prep.microcrystal_max_dim			6
-_pdbx_electron_diffrn_crystal_prep.microcrystal_description		"rectangular or triangular forms with very sharp edges"
-_pdbx_electron_diffrn_crystal_prep.details				"microcrystals of sub micron size co-exist with large crystal in the crystallization drop"
+_diffrn_measurement.diffrn_id				1
+_diffrn_measurement.details				1
+_diffrn_measurement.method				?
+_diffrn_measurement.method_precession 			N
+_diffrn_measurement.pdbx_angle_start			-45
+_diffrn_measurement.pdbx_angle_end 			45
+_diffrn_measurement.pdbx_exposure_time_per_image 	10
+_diffrn_measurement.pdbx_rotation_rate			?
+_diffrn_measurement.rotation_mode 			stepwise
+_diffrn_measurement.sample_tracking 			?
+_diffrn_measurement.sample_tracking_method 		?		
+#
+_pdbx_diffrn_ed.id			        1
+_pdbx_diffrn_ed.diffrn_id			1
+_pdbx_diffrn_ed.beam_diameter_sample_plane 	?
+_pdbx_diffrn_ed.camera_length   		?
+_pdbx_diffrn_ed.c2_aperture_diameter		?
+_pdbx_diffrn_ed.details				?
+_pdbx_diffrn_ed.fluence_accumulated 		9
+_pdbx_diffrn_ed.fluence_rate 			0.01
+_pdbx_diffrn_ed.electron_source 		"FIELD EMISSION GUN"
+_pdbx_diffrn_ed.energyfilter_name		?
+_pdbx_diffrn_ed.energyfilter_upper 		?
+_pdbx_diffrn_ed.energyfilter_lower 		?
+_pdbx_diffrn_ed.recording_mode			Integrating
+_pdbx_diffrn_ed.sa_aperture_diameter 		?
 #

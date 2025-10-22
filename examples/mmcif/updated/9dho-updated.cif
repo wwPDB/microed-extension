@@ -10430,7 +10430,7 @@ _exptl_crystal_grow.crystal_id      1
 _exptl_crystal_grow.details         ? 
 _exptl_crystal_grow.method          EVAPORATION 
 _exptl_crystal_grow.pH              6.5 
-_exptl_crystal_grow.pdbx_details    "dissolving 40 mg/ml proteinase K in 20 mM MES-NaOH pH 6.5. The protein solution was mixed at a 1:1 ratio with a precipitant solution of 0.5 M NaNO3, 0.1 M CaCl2, 0.1 M MES-NaOH pH 6.5."
+_exptl_crystal_grow.pdbx_details    "dissolving 40 mg/ml proteinase K in 20 mM MES-NaOH pH 6.5. The protein solution was mixed at a 1:1 ratio with a precipitant solution of 0.5 M NaNO3, 0.1 M CaCl2, 0.1 M MES-NaOH pH 6.5."
 _exptl_crystal_grow.pdbx_pH_range   ? 
 _exptl_crystal_grow.temp            277
 #
@@ -10441,12 +10441,12 @@ _pdbx_exptl_crystal_process.microcrystal_instrument 	"Helios Hydra 5 CX dual-bea
 _pdbx_exptl_crystal_process.microcrystal_min_dim 	0.3
 _pdbx_exptl_crystal_process.microcrystal_max_dim 	5
 _pdbx_exptl_crystal_process.microcrystal_description 	lamella
-_pdbx_exptl_crystal_process.details 			"stepwise protocol to an optimal thickness of approximately 300 nm using a 30 kV Argon plasma ion beam"
+_pdbx_exptl_crystal_process.details 			"stepwise protocol to an optimal thickness of approximately 300 nm using a 30 kV Argon plasma ion beam"
 #
 _pdbx_exptl_crystal_cryo_treatment.crystal_id			1
 _pdbx_exptl_crystal_cryo_treatment.cooling_details		"grid was rapidly vitrified by plunging it into liquid ethane"
-_pdbx_exptl_crystal_cryo_treatment.final_solution_details	"30% glycerol, 250 mM NaNO3, 50 mM CaCl2, 60 mM MES-NaOH pH 6.5"
-_pdbx_exptl_crystal_cryo_treatment.soaking_details		"sample was soaked for 30 s with 3 μl cryoprotectant solution"
+_pdbx_exptl_crystal_cryo_treatment.final_solution_details	"30% glycerol, 250 mM NaNO3, 50 mM CaCl2, 60 mM MES-NaOH pH 6.5"
+_pdbx_exptl_crystal_cryo_treatment.soaking_details		"sample was soaked for 30 s with 3 μl cryoprotectant solution"
 _pdbx_exptl_crystal_cryo_treatment.cryogen			ETHANE
 #
 # The following categories belong to the diffrn_group of the PDB Electron Diffraction data model
@@ -10504,7 +10504,7 @@ _pdbx_diffrn_ed.diffrn_id			1
 _pdbx_diffrn_ed.beam_diameter_sample_plane 	3.5
 _pdbx_diffrn_ed.camera_length   		1402
 _pdbx_diffrn_ed.c2_aperture_diameter		50
-_pdbx_diffrn_ed.details				"The microscope was aligned for low flux density using spot size 11, and gun lens setting 8 for a less bright but more coherent illumination. The energy filter was tuned to pass electrons with energy losses less than 10 eV, with the zero-loss peak centered in defocused diffraction"
+_pdbx_diffrn_ed.details				"The microscope was aligned for low flux density using spot size 11, and gun lens setting 8 for a less bright but more coherent illumination. The energy filter was tuned to pass electrons with energy losses less than 10 eV, with the zero-loss peak centered in defocused diffraction"
 _pdbx_diffrn_ed.fluence_accumulated 		0.84
 _pdbx_diffrn_ed.fluence_rate 			0.002
 _pdbx_diffrn_ed.electron_source 		"FIELD EMISSION GUN"

@@ -896,21 +896,6 @@ _exptl_crystal.description           ?
 _exptl_crystal.F_000                 ? 
 _exptl_crystal.preparation           ? 
 # 
-_diffrn.id                     1 
-_diffrn.ambient_temp           ? 
-_diffrn.ambient_temp_details   ? 
-_diffrn.crystal_id             1 
-# 
-_diffrn_radiation.diffrn_id                        1 
-_diffrn_radiation.wavelength_id                    1 
-_diffrn_radiation.monochromator                    ? 
-_diffrn_radiation.pdbx_monochromatic_or_laue_m_l   ? 
-_diffrn_radiation.pdbx_diffrn_protocol             ? 
-_diffrn_radiation.pdbx_scattering_type             electron 
-# 
-_diffrn_radiation_wavelength.id           1 
-_diffrn_radiation_wavelength.wavelength   . 
-_diffrn_radiation_wavelength.wt           1.0 
 # 
 _refine.entry_id                                 1BRD 
 _refine.ls_d_res_high                            3.5 
@@ -3770,52 +3755,68 @@ _pdbx_exptl_subtype.exptl_method   "ELECTRON CRYSTALLOGRAPHY"
 _pdbx_exptl_subtype.method_type    "2-Dimensional Electron Crystallography"
 _pdbx_exptl_subtype.details 	   ?
 #
-_pdbx_electron_diffrn.entry_id				1BRD	
-_pdbx_electron_diffrn.id				1  
-_pdbx_electron_diffrn.crystal_id			1  
-_pdbx_electron_diffrn.detector_distance			?
-_pdbx_electron_diffrn.temperature			153
-_pdbx_electron_diffrn.tilt_method			"discrete angles"
-_pdbx_electron_diffrn.collection_date			?
-_pdbx_electron_diffrn.total_images			150
-_pdbx_electron_diffrn.details				?
+# The following categories belong to the diffrn_group of the PDB Electron Diffraction data model
 #
-_pdbx_electron_diffrn_source.id				1
-_pdbx_electron_diffrn_source.electron_diffrn_id		1  
-_pdbx_electron_diffrn_source.instrument_model		"FEI/PHILIPS EM420"
-_pdbx_electron_diffrn_source.dose_rate			?
-_pdbx_electron_diffrn_source.dose_accumulated		?
-_pdbx_electron_diffrn_source.accelerating_voltage 	120
-_pdbx_electron_diffrn_source.electron_source	 	?
-_pdbx_electron_diffrn_source.details			?
+_diffrn.id				1
+_diffrn.ambient_temp			153
+_diffrn.crystal_id			1
+_diffrn.crystal_support			"Copper grids"
+_diffrn.crystal_treatment		?
+_diffrn.details				?
+_diffrn.pdbx_serial_crystal_experiment	N
+# 
+_diffrn_detector.id				1
+_diffrn_detector.diffrn_id			1
+_diffrn_detector.details			?	
+_diffrn_detector.detector 			?
+_diffrn_detector.pdbx_collection_date		?
+_diffrn_detector.pdbx_collection_time_total	?
+_diffrn_detector.pdbx_frames_total		?
+_diffrn_detector.pdbx_frequency			?
+_diffrn_detector.type 				?
 #
-_pdbx_electron_diffrn_detector.id			1
-_pdbx_electron_diffrn_detector.electron_diffrn_id	1  
-_pdbx_electron_diffrn_detector.detector_camera		?
-_pdbx_electron_diffrn_detector.detector_sensor		?
-_pdbx_electron_diffrn_detector.mode			?
-_pdbx_electron_diffrn_detector.details			?
+_diffrn_source.diffrn_id			1
+_diffrn_source.details				?
+_diffrn_source.pdbx_wavelength_list		0.0197
+_diffrn_source.source 				"ELECTRON MICROSCOPE"
+_diffrn_source.type 				"FEI/PHILIPS EM420"
+_diffrn_source.voltage				120
 #
-_pdbx_electron_diffrn_crystal_prep.id					1
-_pdbx_electron_diffrn_crystal_prep.electron_diffrn_id			1  
-_pdbx_electron_diffrn_crystal_prep.crystal_id				1  
-_pdbx_electron_diffrn_crystal_prep.grid					"Copper grids"
-_pdbx_electron_diffrn_crystal_prep.grid_film				CARBON
-_pdbx_electron_diffrn_crystal_prep.vitrification_method			?
-_pdbx_electron_diffrn_crystal_prep.vitrification_cryogen		?
-_pdbx_electron_diffrn_crystal_prep.microcrystal_method			"Naturally grown"
-_pdbx_electron_diffrn_crystal_prep.microcrystal_instrument    		?
-_pdbx_electron_diffrn_crystal_prep.microcrystal_min_dim			?
-_pdbx_electron_diffrn_crystal_prep.microcrystal_max_dim			20
-_pdbx_electron_diffrn_crystal_prep.microcrystal_description		"single layer 2D crystal"
-_pdbx_electron_diffrn_crystal_prep.details				?
+_diffrn_radiation.diffrn_id				1
+_diffrn_radiation.collimation				?
+_diffrn_radiation.pdbx_diffrn_protocol			"SINGLE WAVELENGTH"
+_diffrn_radiation.pdbx_monochromatic_or_laue_m_l	M
+_diffrn_radiation.pdbx_scattering_type			electron
+_diffrn_radiation.wavelength_id				1
 #
-_pdbx_electron_diffrn_discrete_angle.id				1
-_pdbx_electron_diffrn_discrete_angle.electron_diffrn_id		1  
-_pdbx_electron_diffrn_discrete_angle.angle_start		?
-_pdbx_electron_diffrn_discrete_angle.angle_end			?
-_pdbx_electron_diffrn_discrete_angle.angle_increment		?
-_pdbx_electron_diffrn_discrete_angle.tilt_angle_lists		60
-_pdbx_electron_diffrn_discrete_angle.exposure_time_per_image 	?
-_pdbx_electron_diffrn_discrete_angle.details			?
+_diffrn_radiation_wavelength.id           1 
+_diffrn_radiation_wavelength.wavelength   0.0197
+_diffrn_radiation_wavelength.wt           1.0 
+#
+_diffrn_measurement.diffrn_id				1
+_diffrn_measurement.details				1
+_diffrn_measurement.method				?
+_diffrn_measurement.method_precession 			N
+_diffrn_measurement.pdbx_angle_start			60
+_diffrn_measurement.pdbx_angle_end 			?
+_diffrn_measurement.pdbx_exposure_time_per_image 	?
+_diffrn_measurement.pdbx_rotation_rate			?
+_diffrn_measurement.rotation_mode 			stepwise
+_diffrn_measurement.sample_tracking 			?
+_diffrn_measurement.sample_tracking_method 		?		
+#
+_pdbx_diffrn_ed.id			        1
+_pdbx_diffrn_ed.diffrn_id			1
+_pdbx_diffrn_ed.beam_diameter_sample_plane 	?
+_pdbx_diffrn_ed.camera_length   		?
+_pdbx_diffrn_ed.c2_aperture_diameter		?
+_pdbx_diffrn_ed.details				?
+_pdbx_diffrn_ed.fluence_accumulated 		?
+_pdbx_diffrn_ed.fluence_rate 			?
+_pdbx_diffrn_ed.electron_source 		"FIELD EMISSION GUN"
+_pdbx_diffrn_ed.energyfilter_name		?
+_pdbx_diffrn_ed.energyfilter_upper 		?
+_pdbx_diffrn_ed.energyfilter_lower 		?
+_pdbx_diffrn_ed.recording_mode			Integrating
+_pdbx_diffrn_ed.sa_aperture_diameter 		?
 #
