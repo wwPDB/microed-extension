@@ -3,14 +3,16 @@
 ---
 Title: Electron Diffraction Dictionary Extension  
 Author: C. Shao, E. Peisach  
-Date: 11-Jun-2025  
+Date: 21-Oct-2025  
 email: chenghua.shao@rcsb.org  
 ---
 
-This document provides an overview of extensions to support metadata collection and annotation of PDB structures resolved by Electron Diffraction methods, especially the Microcrystal Electron Diffraction (MicroED) method. Listed below are dictionary content of the new data categories designed for Electron Diffraction methods.
+This document provides an overview of extensions to support metadata collection and annotation of PDB structures resolved by Electron Diffraction methods, especially by 3D ED/MicroED method. Listed below are the NEW data items designed for Electron Diffraction methods.
 
 ## pdbx_exptl_subtype
-Data items in PDBX_EXPTL_SUBTYPE describes specific details about the experiments in the EXPTL category.
+Data items in the PDBX_EXPTL_SUBTYPE category record
+details about the method subtype under the primary
+method recorded in _exptl.method
 
 
 * **_pdbx_exptl_subtype.exptl_method**
@@ -18,9 +20,11 @@ Data items in PDBX_EXPTL_SUBTYPE describes specific details about the experiment
 
 
 * **_pdbx_exptl_subtype.method_type**
-: The subtype of the method used in the experiment. The subtype should be a variance
-of the primary method recorded in the the _exptl.method item, with distinctive
-	       technical applications and significant scientific impacts.
+: The subtype of the method used in the experiment. The
+subtype should be a variance of the primary method
+recorded in the _exptl.method item, with distinctive
+technical applications and significant scientific
+impacts.
 
     *Enumeration:*
 
@@ -32,333 +36,222 @@ of the primary method recorded in the the _exptl.method item, with distinctive
 : Details about the method subtype.
 
 
-## pdbx_electron_diffrn
-Data items in the PDBX_ELECTRON_DIFFRN describes individual diffraction processes
+## pdbx_exptl_crystal_process
+Data items in the pdbx_exptl_crystal_process category
+record details of the post-crystallization process to
+prepare specific crystal samples such as microcrystals
+for subsequent diffraction experiments.
 
 
-* **_pdbx_electron_diffrn.id**
-: This data item uniquely identifies the collection process of a set
-of diffraction data
-
-
-* **_pdbx_electron_diffrn.entry_id**
-: This data is a pointer to _entry.id in the ENTRY category.
-
-
-* **_pdbx_electron_diffrn.crystal_id**
-: This data item is a pointer to the EXPTL_CRYSTAL category.
-
-
-* **_pdbx_electron_diffrn.detector_distance**
-: Also called the camera length (in millimeters). The camera length
-is the product of the objective focal length and the combined
-magnification of the intermediate and projector lenses when the
-microscope is operated in the diffraction mode.
-
-
-* **_pdbx_electron_diffrn.temperature**
-: The mean temperature in kelvins at which the data collection
-was performed on the sample
-
-
-* **_pdbx_electron_diffrn.tilt_method**
-: The way the sample and/or beam were tilted during the data collection
-
-    *Enumeration:*
-
-      * continuous rotation
-      * discrete angles
-      * none
-
-
-* **_pdbx_electron_diffrn.collection_date**
-: The date of the start of data collection
-
-
-* **_pdbx_electron_diffrn.total_images**
-: The number of diffraction images collected
-
-
-* **_pdbx_electron_diffrn.details**
-: Details of the electron diffraction process
-
-
-## pdbx_electron_diffrn_crystal_prep
-Describes microcrystal preparation.
-
-
-* **_pdbx_electron_diffrn_crystal_prep.id**
+* **_pdbx_exptl_crystal_process.id**
 : The ordinal identifier for the category
 
 
-* **_pdbx_electron_diffrn_crystal_prep.electron_diffrn_id**
-: This data item is a pointer to the pdbx_electron_diffrn category
+* **_pdbx_exptl_crystal_process.crystal_id**
+: This data item is a pointer to the _exptl_crystal.id
 
 
-* **_pdbx_electron_diffrn_crystal_prep.crystal_id**
-: This data item is a pointer to the EXPTL_CRYSTAL category.
-
-
-* **_pdbx_electron_diffrn_crystal_prep.grid**
-: The type of grid that holds the sample
-
-
-* **_pdbx_electron_diffrn_crystal_prep.grid_film**
-: The film of the grid if applicable
+* **_pdbx_exptl_crystal_process.microcrystal_method**
+: The method used to produce microcrystals for
+diffraction experiments, if applicable.
 
     *Enumeration:*
 
-      * FORMVAR PLUS CARBON
-      * CARBON
-      * SILICON DIOXIDEz
-      * CELLULOSE ACETATE PLUS CARBON
-      * HOLEY CARBON
-      * PARLODION PLUS CARBON
+      * Vortexing
+      * Other
+      * FIB milling
+      * Naturally grown
+      * Sonication
 
 
-* **_pdbx_electron_diffrn_crystal_prep.vitrification_method**
-: The procedure for vitrification
+* **_pdbx_exptl_crystal_process.microcrystal_instrument**
+: The instrument used to produce microcrystals for the experiments, if applicable.
 
 
-* **_pdbx_electron_diffrn_crystal_prep.vitrification_cryogen**
+* **_pdbx_exptl_crystal_process.microcrystal_min_dim**
+: The minimal dimension of the final crystal ready for
+diffraction experiments. For example, for
+microcrystals processed by FIB milling, this item
+refers to the thickness of the thin lamella.
+
+
+* **_pdbx_exptl_crystal_process.microcrystal_max_dim**
+: The maximal dimension of the final crystal ready for
+diffraction experiments. For example, for
+microcrystals processed by FIB milling, this item
+refers to the length of the thin lamella.
+
+
+* **_pdbx_exptl_crystal_process.microcrystal_description**
+: Characteristics of the final crystal ready for diffraction experiments, e.g. shape.
+
+
+* **_pdbx_exptl_crystal_process.details**
+: The details about the crystal process.
+
+
+## pdbx_exptl_crystal_cryo_treatment
+Data items in the PDBX_EXPTL_CRYSTAL_CRYO_TREATMENT category
+record details cryogenic treatments applied to this crystal.
+
+
+* **_pdbx_exptl_crystal_cryo_treatment.cryogen**
 : The name of cryogen used for vitrification
 
     *Enumeration:*
 
-      * OTHER
-      * NITROGEN
       * ETHANE
+      * NITROGEN
+      * OTHER
 
 
-* **_pdbx_electron_diffrn_crystal_prep.microcrystal_method**
-: The method used to produce microcrystal for the experiments, if applicable.
-
-    *Enumeration:*
-
-      * Sonication
-      * FIB milling
-      * Other
-      * Vortexing
-      * Naturally grown
+## diffrn_measurement
+Data items in the DIFFRN_MEASUREMENT category record details
+about the device used to orient and/or position the crystal
+during data measurement and the manner in which the diffraction
+data were measured.
 
 
-* **_pdbx_electron_diffrn_crystal_prep.microcrystal_instrument**
-: The instrument used to produce microcrystal for the experiments, if applicable.
+* **_diffrn_measurement.pdbx_angle_start**
+: The starting angle for crystal rotation.
 
 
-* **_pdbx_electron_diffrn_crystal_prep.microcrystal_min_dim**
-: The minimal dimension of the final crystal ready for diffraction experiments measured
-in micrometres. For example, for microcrystal processed by FIB milling, this item refers
-to the thickness of the thin lamella, which is the deciding factor whether quality
-electron diffraction patterns can be achieved. Submicrometer is usually desired.
+* **_diffrn_measurement.pdbx_angle_end**
+: The ending angle for crystal rotation.
 
 
-* **_pdbx_electron_diffrn_crystal_prep.microcrystal_max_dim**
-: The maximal dimension of the final crystal ready for diffraction experiments measured
-in micrometres. For example, for microcrystal processed by FIB milling, this item
-refers to the length of the thin lamella.
+* **_diffrn_measurement.pdbx_rotation_rate**
+: The speed of crystal rotation.
 
 
-* **_pdbx_electron_diffrn_crystal_prep.microcrystal_description**
-: The shape or state of the final crystal ready for diffraction
+* **_diffrn_measurement.pdbx_exposure_time_per_image**
+: The exposure time per image for the crystal and
+detector/camera.
 
 
-* **_pdbx_electron_diffrn_crystal_prep.details**
-: The details about the crystal preparation for electron diffraction
-
-
-## pdbx_electron_diffrn_source
-Describe the electron source
-
-
-* **_pdbx_electron_diffrn_source.id**
-: The ordinal identifier for the category
-
-
-* **_pdbx_electron_diffrn_source.electron_diffrn_id**
-: This data item is a pointer to the pdbx_electron_diffrn category
-
-
-* **_pdbx_electron_diffrn_source.instrument_model**
-: Name of the instrument for electron generation and diffraction,
-e.g. the model of microscope
+* **_diffrn_measurement.rotation_mode**
+: Originated from IUCr Electron Diffraction CIF
+extension. Code describing the technique used to
+sample as completely as possible the accessible range
+of reciprocal space. Rotation mode indicates the
+detector records diffracted intensities continuously
+while the sample is rotated. Stepwise model indicates
+the detector records diffracted intensities while the
+sample is stationary.
 
     *Enumeration:*
 
-      * FEI/PHILIPS CM300FEG/ST
-      * JEOL KYOTO-3000SFF
-      * FEI/PHILIPS CM300FEG/T
-      * JEOL 100B
-      * FEI/PHILIPS CM12
-      * JEOL 2100
-      * TFS TALOS
-      * FEI TECNAI 20
-      * TFS TALOS F200C
-      * HITACHI HF3000
-      * FEI TECNAI F20
-      * JEOL 2100F
-      * FEI TECNAI 12
-      * FEI TITAN
-      * FEI TECNAI F30
-      * SIEMENS SULEIKA
-      * ZEISS LIBRA120PLUS
-      * TFS GLACIOS
-      * FEI TALOS ARCTICA
-      * TFS KRIOS
-      * HITACHI EF3000
-      * JEOL CRYO ARM 300
-      * JEOL 4000
-      * FEI/PHILIPS CM200FEG
-      * JEOL 2010F
-      * FEI POLARA 300
-      * FEI/PHILIPS EM420
-      * FEI TITAN KRIOS
-      * JEOL 3000SFF
-      * JEOL 4000EX
+      * rotation
+      * stepwise
 
 
-* **_pdbx_electron_diffrn_source.dose_rate**
-: The electron dose rate in the unit of electron per square angstrom per second
+* **_diffrn_measurement.method_precession**
+: Originated from IUCr Electron Diffraction CIF
+extension. Flag indicating if the radiation beam
+illuminates the sample at an angle that is rotated
+about a precession axis.
+
+    *Enumeration:*
+
+      * N
+      * Y
 
 
-* **_pdbx_electron_diffrn_source.dose_accumulated**
-: The accumulated dose during the collection of the diffraction data
-set indicated by _pdbx_electron_diffrn_source.electron_diffrn_id,
-in the unit of electron per square angstrom
+* **_diffrn_measurement.sample_tracking**
+: Originated from IUCr Electron Diffraction CIF
+extension. Flag indicating if a tracking method to
+follow the crystal was used in the data
+acquisition. Typically used to track very small
+crystals in electron diffraction experiments.
+
+    *Enumeration:*
+
+      * N
+      * Y
 
 
-* **_pdbx_electron_diffrn_source.accelerating_voltage**
-: A value of accelerating voltage (in kV) used for the electron microscopy diffraction
+* **_diffrn_measurement.sample_tracking_method**
+: Originated from IUCr Electron Diffraction CIF
+extension. Description of the method used to follow
+the crystal during data collection.
 
 
-* **_pdbx_electron_diffrn_source.electron_source**
+## pdbx_diffrn_ed
+Data items in the PDBX_DIFFRN_ED record details specific to electron diffraction method.
+
+
+* **_pdbx_diffrn_ed.id**
+: This ordinal identifier for the category
+
+
+* **_pdbx_diffrn_ed.diffrn_id**
+: This data item is a pointer to the _diffrn.id
+
+
+* **_pdbx_diffrn_ed.electron_source**
 : The source of electrons, i.e. the electron gun
 
-
-* **_pdbx_electron_diffrn_source.details**
-: The details of the electron microscope and the electron source
-
-
-## pdbx_electron_diffrn_detector
-Describes the detector/camera
-
-
-* **_pdbx_electron_diffrn_detector.id**
-: The ordinal identifier for this category
-
-
-* **_pdbx_electron_diffrn_detector.electron_diffrn_id**
-: This data item is a pointer to the pdbx_electron_diffrn category
-
-
-* **_pdbx_electron_diffrn_detector.detector_camera**
-: The detector/camera used for recording diffraction images.
-
-
-* **_pdbx_electron_diffrn_detector.detector_sensor**
-: The general class of the electron sensor used for the detector.
-
     *Enumeration:*
 
-      * PIXEL
-      * CCD
-      * CMOS
-      * FILM
+      * OTHER
+      * FIELD EMISSION GUN
+      * LAB6
 
 
-* **_pdbx_electron_diffrn_detector.mode**
-: The mode of the detector for electron diffraction recording
+* **_pdbx_diffrn_ed.beam_diameter_sample_plane**
+: The electron beam diameter at the sample plane
+
+
+* **_pdbx_diffrn_ed.camera_length**
+: The product of the objective focal length and the
+combined magnification of the intermediate and projector
+lenses when the microscope is operated in the
+diffraction mode.
+
+
+* **_pdbx_diffrn_ed.recording_mode**
+: The mode of the detector for electron diffraction recording, e.g.
+Electron Counting (Event) mode, Linear (Integrating) mode
 
     *Enumeration:*
 
       * Other
       * Integrating
-      * Counting
+      * Electron Counting
 
 
-* **_pdbx_electron_diffrn_detector.details**
-: The details about the electron microscope detector and camera
+* **_pdbx_diffrn_ed.fluence_rate**
+: Fluence rate, or flux density at the sample plane
 
 
-## pdbx_electron_diffrn_continuous_rotation
-Describes continuous rotation data collection
+* **_pdbx_diffrn_ed.fluence_accumulated**
+: Total fluence at the sample plane
 
 
-* **_pdbx_electron_diffrn_continuous_rotation.id**
-: The ordinal identifier for the category
+* **_pdbx_diffrn_ed.c2_aperture_diameter**
+: C2 aperture diameter
 
 
-* **_pdbx_electron_diffrn_continuous_rotation.electron_diffrn_id**
-: This data item is a pointer to the pdbx_electron_diffrn category
+* **_pdbx_diffrn_ed.sa_aperture_diameter**
+: Select Area aperture diameter
 
 
-* **_pdbx_electron_diffrn_continuous_rotation.angle_start**
-: The starting tilt angle in degrees for continuous rotation data collection.
+* **_pdbx_diffrn_ed.energyfilter_name**
+: The name of the energy filter
 
 
-* **_pdbx_electron_diffrn_continuous_rotation.angle_end**
-: The ending tilt angle in degrees for continuous rotation data collection.
+* **_pdbx_diffrn_ed.energyfilter_upper**
+: The energy filter range upper value in electron volts (eV)
+set by the specrometer
 
 
-* **_pdbx_electron_diffrn_continuous_rotation.rotation_rate**
-: The speed of continuous rotation measured in degrees/second
+* **_pdbx_diffrn_ed.energyfilter_lower**
+: The energy filter range lower value in electron volts (eV)
+set by the specrometer
 
 
-* **_pdbx_electron_diffrn_continuous_rotation.exposure_time_per_image**
-: The exposure time of the rolling shutter model of the detector/camera
-measured in seconds.
-
-
-* **_pdbx_electron_diffrn_continuous_rotation.angle_per_image**
-: Approximate angles covered by each image for continuous rotation data collection.
-
-
-* **_pdbx_electron_diffrn_continuous_rotation.details**
-: Additional details about the continuous rotation data collection
-
-
-## pdbx_electron_diffrn_discrete_angle
-Describes data collection at still discrete angles
-
-
-* **_pdbx_electron_diffrn_discrete_angle.id**
-: The ordinal identifier for the category
-
-
-* **_pdbx_electron_diffrn_discrete_angle.electron_diffrn_id**
-: This data item is a pointer to the pdbx_electron_diffrn category
-
-
-* **_pdbx_electron_diffrn_discrete_angle.angle_start**
-: The starting tilt angle as measured in degrees for data collection at the discrete
-angles. If both crystal and beam are tilted, record the combination results of
-relative angles.
-
-
-* **_pdbx_electron_diffrn_discrete_angle.angle_end**
-: The ending tilt angle for data collection at the discrete angles
-measured in degrees. If both crystal and beam are tilted, record
-the combination results of relative angles.
-
-
-* **_pdbx_electron_diffrn_discrete_angle.angle_increment**
-: The tilt angle increment for data collection at the discrete angles.
-If both crystal and beam are tilted, record the change of the combinational
-relative angles.
-
-
-* **_pdbx_electron_diffrn_discrete_angle.tilt_angle_lists**
-: The comma-separated complete tilt angle list for data collection at the discrete angles.
-If both crystal and beam are tilted, record the combination results of relative angles.
-
-
-* **_pdbx_electron_diffrn_discrete_angle.exposure_time_per_image**
-: The exposure time of the rolling shutter model of the detector/camera
-measured in seconds.
-
-
-* **_pdbx_electron_diffrn_discrete_angle.details**
-: Additional details about the continuous rotation data collection
+* **_pdbx_diffrn_ed.details**
+: Details of the electron diffration process
 
 
 
