@@ -12,7 +12,7 @@
 
 
 ## Introduction
-Electron diffraction on two-dimensional (2D) crystals was first reported by Henderson in 1975. The first structure resolved by 2D Electron Crystallography (2DEC), bacteriorhodopsin (PDB ID: 1BRD), was deposited into the Protein Data Bank (PDB) in 1990. Between 1990 and 2012, only 36 2DEC structures were added to the PDB, with an annual deposition rate ranging from 0 to 5 entries. This landscape shifted significantly with the development of 3D Microcrystal Electron Diffraction (3D ED/MicroED), a technique that applies electron diffraction to small three-dimensional (3D) crystals. As shown in the following figure, the growth of 3D ED/MicroED has been substantial—over 40 3D ED/MicroED structures were deposited in the PDB in 2021 alone.
+Electron diffraction on two-dimensional (2D) crystals was first reported by Henderson in 1975. The first structure resolved by 2D Electron Crystallography (2DEC), bacteriorhodopsin (PDB ID: 1BRD), was deposited into the Protein Data Bank (PDB) in 1990. Between 1990 and 2012, only 36 2DEC structures were added to the PDB, with an annual deposition rate ranging from 0 to 5 entries. This landscape shifted significantly with the development of 3D Microcrystal Electron Diffraction (3D ED/MicroED), a technique that applies electron diffraction to small three-dimensional (3D) crystals. As shown in the following figure, the growth of 3D ED/MicroED has been substantial—52 3D ED/MicroED structures have been deposited in the PDB from Jan to Oct in 2025.
 
 <img src="imgs/growth.png" alt="linked_mod" width="600px">
 Figure 1: Growth of PDB structures resolved by electron diffraction.
@@ -31,7 +31,7 @@ In summary, 3D ED/MicroED enables high-resolution structure determination from s
 
 
 ## Scope
-As of June 18, 2025, there are 267 publicly released PDB structures resolved by electron diffraction method. Among them ~20% were resolved by 2DEC, and ~80% by 3D ED/MicroED. There are also 30+ structures that have been deposited but not released yet, raising the total to ~300. The improved electron diffraction proposed here will update all of these structures.
+As of Oct, 2025, there are 273 publicly released PDB structures resolved by electron diffraction method. Among them ~20% were resolved by 2DEC, and ~80% by 3D ED/MicroED. The improved electron diffraction proposed here will update all of these structures.
 
 
 ## Updates
