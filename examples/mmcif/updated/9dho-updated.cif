@@ -10462,12 +10462,11 @@ _diffrn.pdbx_serial_crystal_experiment	N
 _diffrn_detector.id				1
 _diffrn_detector.diffrn_id			1
 _diffrn_detector.details			?	
-_diffrn_detector.detector 			"DIRECT ELECTRON DETECTOR"
+_diffrn_detector.detector 			"ELECTRON DETECTOR"
 _diffrn_detector.pdbx_collection_date		?
 _diffrn_detector.pdbx_collection_time_total	?
-_diffrn_detector.pdbx_frames_total		?
 _diffrn_detector.pdbx_frequency			320
-_diffrn_detector.type 				"TFS FALCON 4i (4k x 4k)"
+_diffrn_detector.type 				"TFS FALCON 4i"
 #
 _diffrn_source.diffrn_id			1
 _diffrn_source.details				?

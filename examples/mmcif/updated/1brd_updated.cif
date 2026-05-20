@@ -3771,7 +3771,6 @@ _diffrn_detector.details			?
 _diffrn_detector.detector 			?
 _diffrn_detector.pdbx_collection_date		?
 _diffrn_detector.pdbx_collection_time_total	?
-_diffrn_detector.pdbx_frames_total		?
 _diffrn_detector.pdbx_frequency			?
 _diffrn_detector.type 				?
 #
